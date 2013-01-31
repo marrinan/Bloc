@@ -1,0 +1,95 @@
+cli_assignment.txt
+
+Last login: Thu Jan 24 17:22:00 on ttys000
+You have mail.
+Ryans-MacBook-Pro-Retina:~ marrinan$ mkdir code
+mkdir: code: File exists
+Ryans-MacBook-Pro-Retina:~ marrinan$ pwd
+/Users/marrinan
+Ryans-MacBook-Pro-Retina:~ marrinan$ cd code
+Ryans-MacBook-Pro-Retina:code marrinan$ pwd
+/Users/marrinan/code
+Ryans-MacBook-Pro-Retina:code marrinan$ ls
+FancyCalc.rb	Word_Sort.rb	snippets.rb	triangle.rb
+Ryans-MacBook-Pro-Retina:code marrinan$ ls -l
+total 32
+-rw-r--r--  1 marrinan  staff  464 Jan 24 19:23 FancyCalc.rb
+-rw-r--r--  1 marrinan  staff  100 Jan 24 19:25 Word_Sort.rb
+-rw-r--r--  1 marrinan  staff   19 Jan 24 17:26 snippets.rb
+-rw-r--r--  1 marrinan  staff  335 Jan 24 19:26 triangle.rb
+Ryans-MacBook-Pro-Retina:code marrinan$ cp FancyCalc.rb FancyCalc2.rb
+Ryans-MacBook-Pro-Retina:code marrinan$ ls -l
+total 40
+-rw-r--r--  1 marrinan  staff  464 Jan 24 19:23 FancyCalc.rb
+-rw-r--r--  1 marrinan  staff  464 Jan 24 19:28 FancyCalc2.rb
+-rw-r--r--  1 marrinan  staff  100 Jan 24 19:25 Word_Sort.rb
+-rw-r--r--  1 marrinan  staff   19 Jan 24 17:26 snippets.rb
+-rw-r--r--  1 marrinan  staff  335 Jan 24 19:26 triangle.rb
+Ryans-MacBook-Pro-Retina:code marrinan$ open .
+Ryans-MacBook-Pro-Retina:code marrinan$ cat FancyCalc2.rb
+FancyCalc.rb
+
+def add(num1, num2)
+  result = num1 + num2
+  "The sum of #{ num1 } and #{ num2 } is #{ result }."
+end
+
+def subtract(num1, num2)
+  result = num1 - num2
+  "The difference of #{ num1 } and #{ num2 } is #{ result }."
+end
+
+def multiply(num1, num2)
+  result = num1 * num2
+  "The product of #{ num1 } and #{ num2 } is #{ result }."
+end
+
+def divide(num1, num2)
+  result = num1.to_f / num2.to_f
+  "The quotient of #{ num1 } and #{ num2 } is #{ result }."
+end
+Ryans-MacBook-Pro-Retina:code marrinan$ rm FancyCalc2.rb
+Ryans-MacBook-Pro-Retina:code marrinan$ ls -l
+total 32
+-rw-r--r--  1 marrinan  staff  464 Jan 24 19:23 FancyCalc.rb
+-rw-r--r--  1 marrinan  staff  100 Jan 24 19:25 Word_Sort.rb
+-rw-r--r--  1 marrinan  staff   19 Jan 24 17:26 snippets.rb
+-rw-r--r--  1 marrinan  staff  335 Jan 24 19:26 triangle.rb
+Ryans-MacBook-Pro-Retina:code marrinan$ cat FancyCalc2.rb
+cat: FancyCalc2.rb: No such file or directory
+Ryans-MacBook-Pro-Retina:code marrinan$ cat triangle.rb
+triangle.rb
+
+def triangle(side1, side2, side3)
+  if side1 >= side2 + side3 || side2 >= side1 + side3 || side3 >= side1 + side2
+    :invalid
+  elsif side1 == side2 && side2 == side3
+    :equilateral
+  elsif side1 == side2 || side1 == side3 || side2 == side3
+    :isosceles
+  else side1 != side2  && side2 != side3
+    :scalene
+  end
+endRyans-MacBook-Pro-Retina:code marrinan$ echo hello world
+hello world
+Ryans-MacBook-Pro-Retina:code marrinan$ echo "test code" > triangle.rb
+Ryans-MacBook-Pro-Retina:code marrinan$ cat triangle.rg
+cat: triangle.rg: No such file or directory
+Ryans-MacBook-Pro-Retina:code marrinan$ cat triangle.rb
+test code
+Ryans-MacBook-Pro-Retina:code marrinan$ cat triangle.rb
+test code
+Ryans-MacBook-Pro-Retina:code marrinan$ grep -r def
+grep: warning: recursive search of stdin
+
+exit
+
+
+
+grep def
+(standard input):grep def
+grep def
+(standard input):grep def
+cd..
+cd ..
+
