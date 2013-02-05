@@ -1,5 +1,3 @@
-num_to_words.rb
-
 module InWords
     # creates an array with text string elements and assigns to a variable
     SMALL_NUMBERS = %w{zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen}
