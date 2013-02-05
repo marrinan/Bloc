@@ -13,8 +13,9 @@ get '/about' do
     'A little about me.'
 end
 
-# if the '/about' URL is requested (using GET HTTP method), "A little about me" will display
+# creates a route where anything after '/hello' will be contained in a `params` array with the key `:name`.
+# `params` array contains all GET and POST variables
 
 get '/hello/:name' do
-    params[:name]
+    "Aloha, #{params[:name]}. If you're here and I'm here, isn't it our time?"
 end
