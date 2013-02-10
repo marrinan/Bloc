@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf8">
+<!-- Prints whatever is in the @title instance variable followed by | Recall -->
+	<title><%= @title + ' | Recall' %></title>
+	<link href="/reset.css" rel="stylesheet">
+	<link href="/style.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<hgroup>
+			<h1><a href="/">Recall</a></h1>
+			<h2>'cause you're too busy to remember</h2>
+		</hgroup>
+	</header>
+	<div id="main">
+<!-- Sinatra will display this `layout.erb` file on all Routes, and the actual content will be inserted wherever the `yield` is -->
+		<%= yield %>
+	</div>
+	<footer><p><small>An app for <a href="http://net.tutsplus.com">Nettuts+</a></small></p>
+	</footer>
+</body>
+</html>
